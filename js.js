@@ -13,8 +13,7 @@ document.querySelector("#myForm").addEventListener("submit", (e) => {
       console.log(user);
       if (user) {
         return (result.textContent = `${user.name} ${user.family_name} خوش آمدی`);
-      }
-      result.textContent = `کاربری با این مشخصات یافت نشد`;
+      } else result.textContent = `کاربری با این مشخصات یافت نشد`;
       if (!res.ok) throw new Error(`${data.message}${res.status}`);
     } catch (error) {
       console.log(error);
